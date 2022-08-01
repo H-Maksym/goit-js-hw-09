@@ -1,5 +1,3 @@
-const throttle = require('lodash.throttle');
-
 // Описаний в документації
 import flatpickr from "flatpickr";
 // Додатковий імпорт стилів
@@ -59,7 +57,7 @@ function onTimerStart() {
     timerId = setInterval(renderCounter, 1000);
 }
 
-btnStartEl.addEventListener('click', throttle(onTimerStart, 1000));
+btnStartEl.addEventListener('click', onTimerStart);
 
 
 function addLeadingZero(value) {
