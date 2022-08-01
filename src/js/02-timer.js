@@ -30,7 +30,7 @@ const optionsFlatpickr = {
     },
 };
 
-const fp = flatpickr(inputEl, optionsFlatpickr);
+const flatPickrForm = flatpickr(inputEl, optionsFlatpickr);
 
 
 function renderCounter() {
@@ -51,6 +51,7 @@ function getRemainingTime(selectedTime) {
 }
 
 function onTimerStart() {
+    Notify.success("Let's go! 🚀 ");
     changeDisableBtn(btnStartEl, true);
     timerId = setInterval(renderCounter, 1000);
 }
