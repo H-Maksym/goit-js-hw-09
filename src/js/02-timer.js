@@ -34,7 +34,7 @@ const flatPickrForm = flatpickr(inputEl, optionsFlatpickr);
 
 
 function renderCounter() {
-    const remainingTime = getRemainingTime(fp.selectedDates[0].getTime())
+    const remainingTime = getRemainingTime(flatPickrForm.selectedDates[0].getTime())
 
     if (remainingTime < 1000) {
         clearInterval(timerId);
@@ -57,6 +57,7 @@ function onTimerStart() {
 }
 
 btnStartEl.addEventListener('click', onTimerStart);
+
 
 
 function convertMs(ms) {
