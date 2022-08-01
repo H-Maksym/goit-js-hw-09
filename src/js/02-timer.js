@@ -59,10 +59,6 @@ function onTimerStart() {
 btnStartEl.addEventListener('click', onTimerStart);
 
 
-function addLeadingZero(value) {
-    return value.toString().padStart(2, '0')
-}
-
 function convertMs(ms) {
     // Number of milliseconds per unit of time
     const second = 1000;
